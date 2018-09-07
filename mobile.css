@@ -1,6 +1,19 @@
+.iframe_box{
+    width: 300px;
+    height: 300px;
+}
+
+object, embed{
+    width: 99%;
+    height: 99%;
+    margin: auto;
+    overflow-y: auto;
+}
+
+
 .carousel{
     background: transparent;
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -22,3 +35,23 @@
     background-color: #BD7F00;
     height: 46px;
 }
+
+#mainInfo{
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+    background-color: #716752;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition-property: width, height;
+    -webkit-transition-duration: .25s;
+    transition-property: width, height;
+    transition-duration: .25s;
+}
+
+#mainInfo:hover{
+    width: 300px;
+}
+

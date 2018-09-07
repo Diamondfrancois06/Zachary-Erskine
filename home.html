@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css"
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.js"></script>
+    <script src="https://use.fontawesome.com/8b0f779b88.js"></script>
     <title>Zachary Erskine | Musician & Songwriter</title>
 
 </head>
@@ -45,37 +46,48 @@
 
 
     <div id="body">
-
         <div id="mainInfo">
-            <h1>Zachary Erskine</h1>
+            <h3>Zachary Erskine</h3>
             <h4>Rapper & Songwriter</h4>
         </div>
 
         <div class="container-fluid">
 
             <div id="center">
-                <h5 class="text-center" id="tours-sounds">Tour & Music</h5>
+                <div class="h5text">
+                    <h5 class="text-center" id="tours-sounds">Tour & Music</h5>
+                </div>
+            </div>
+            <div class="iframe_box">
+                <object data="http://www.web-source.net">
+                    <embed src="http://www.web-source.net"> </embed>
+                    Error: Embedded data could not be displayed.
+                </object>
             </div>
             <hr/>
 
             <div id="center">
-                <h5 class="text-center" id="social">Social</h5>
+                <div class="h5text">
+                    <h5 class="text-center" id="social">Social</h5>
+                </div>
             </div>
             <hr/>
             <div class="carousel" data-flickity='{ "resize": false }'>
                 <div class="carousel-cell">
                     <a class="twitter-timeline" data-width="100%" data-height="350" data-theme="dark" data-link-color="#FAB81E" href="https://twitter.com/daZinci?ref_src=twsrc%5Etfw">Tweets by daZinci</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    <footer id="swipe">Swipe Here</footer>
+                    <footer id="swipe">Swipe</footer>
                 </div>
                 <div class="carousel-cell">
                     <iframe width="100%" height="350" scrolling="no" frameborder="no" allow="" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/101344696&color=%233f3624&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
                     </iframe>
-                    <footer id="swipe">Swipe Here</footer>
+                    <footer id="swipe">Swipe</footer>
                 </div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
+                <div class="carousel-cell">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/8f52gyk5m70" frameborder="0" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                    <footer id="swipe">Swipe</footer>
+                </div>
             </div>
         </div>
 
@@ -99,8 +111,3 @@
 </div>
 
 </html>
-
-<!--<div class="carousel-cell" id="instafeed">
-        <script src="//www.powr.io/powr.js?external-type=html"></script>
-        <div class="powr-instagram-feed" id="88d382eb_1536097442"></div>
-    </div>-->
