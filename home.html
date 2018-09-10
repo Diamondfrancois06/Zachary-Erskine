@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    <style>
+        .active {
+            background-color: #716752;
+        }
+    </style>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,46 +14,30 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.js"></script>
-    <script src="https://use.fontawesome.com/8b0f779b88.js"></script>
-    <title>Zachary Erskine | Musician & Songwriter</title>
+    <title>Erskine Music&trade;</title>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #BD7F00;">
-        <a class="navbar-brand" href="home.html">Z Erskine</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://soundcloud.com/erskinedavinci">
-                        <i class="fa fa-soundcloud" aria-hidden="true"></i>&nbsp;Soundcloud</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://twitter.com/daZinci">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;Twitter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/erskine.davinci/">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        &nbsp;Instagram</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <ul id="navigation">
+        <li> <a href="https://soundcloud.com/erskinedavinci"><i class="fab fa-soundcloud"></i>&nbsp;SoundCloud</a></li>
+        <li> <a href="https://twitter.com/daZinci"><i class="fab fa-twitter"></i>&nbsp;Twitter</a></li>
+        <li> <a href="https://www.instagram.com/erskine.davinci/"><i class="fab fa-instagram"></i>&nbsp;Instagram</a></li>
+
+        <!-- Navigation Bar Branding -->
+
+        <li style="float: right"> <a href="home.html" class="active">Erskine</a> </li>
+    </ul>
 
 
     <div id="body">
         <div id="mainInfo">
-            <h3>Zachary Erskine</h3>
-            <h4>Rapper & Songwriter</h4>
+            <h2>Erskine</h3>
         </div>
 
         <div class="container-fluid">
@@ -59,25 +48,26 @@
                 </div>
             </div>
             <div class="iframe_box">
-                <object data="https://www.soundcloud.com">
-                    <embed src="https://www.soundcloud.com"> </embed>
+                <object data="http://www.web-source.net">
+                    <embed src="https://www.web-source.net"> </embed>
                     Error: Embedded data could not be displayed.
                 </object>
             </div>
-            <hr/>
+            <hr />
 
             <div id="center">
                 <div class="h5text">
                     <h5 class="text-center" id="social">Social</h5>
                 </div>
             </div>
-            <hr/>
+            <hr />
 
             <div class="blur">
                 <div class="carousel" id="slidefade" data-flickity='{ "resize": false }' data-flickity='{"prevNextButtons": false}'>
                     <div class="carousel-cell">
-                        <a data-flickity- class="twitter-timeline" data-width="100%" data-height="350" data-theme="dark" data-link-color="#FAB81E"
-                            href="https://twitter.com/daZinci?ref_src=twsrc%5Etfw">Tweets by daZinci</a>
+                        <a data-flickity- class="twitter-timeline" data-width="100%" data-height="350" data-theme="dark"
+                            data-link-color="#FAB81E" href="https://twitter.com/daZinci?ref_src=twsrc%5Etfw">Tweets by
+                            daZinci</a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         <footer id="swipe">Swipe</footer>
                     </div>
@@ -87,8 +77,8 @@
                         <footer id="swipe">Swipe</footer>
                     </div>
                     <div class="carousel-cell">
-                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/8f52gyk5m70" frameborder="0" allow="autoplay; encrypted-media"
-                            allowfullscreen></iframe>
+                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/8f52gyk5m70" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         <footer id="swipe">Swipe</footer>
                     </div>
                 </div>
