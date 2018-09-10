@@ -67,3 +67,8 @@ object, embed{
     width: 300px;
 }
 
+/* CSS for Navbar on Mobile Devices */
+#navigation > li > a {
+    font-size: 12px;
+}
+

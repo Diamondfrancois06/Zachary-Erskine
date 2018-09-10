@@ -10,8 +10,38 @@ html{
 body{
     color: #FFAE00;
     background: transparent;
-    font-family: 'Italian Cursive, 16th c.'
+    font-family: '';
+    min-width: 100%;
 }
+
+#navigation{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: #BD7F00;
+    overflow: hidden;
+}
+
+#navigation > li{
+    display: inline;
+}
+
+#navigation > li > a{
+    display: block;
+    padding: 5px;
+    float: left;
+    color: #FFAE00;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+#navigation > li > a:hover{
+    background-color: #716752;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 #body{
     min-height: 100%;
@@ -113,12 +143,17 @@ object, embed{
     
 }
 
+navbar, #footer{
+    min-width: 100%;
+}
+
 .carousel{
     background: transparent;
     width: 820px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
+    border 2px rgba(0,0,0,0.5);
 }
 
 .carousel-cell{
