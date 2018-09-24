@@ -8,12 +8,23 @@
         }
     </style>
 
+    <!-- JavaScript for Sidebar Navigation-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="mobile.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.css">
@@ -23,47 +34,27 @@
 </head>
 
 <body>
+    <!-- Button for Sidebar Navigation-->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-    <ul id="navigation">
-        <li> <a href="https://soundcloud.com/erskinedavinci"><i class="fab fa-soundcloud"></i>&nbsp;SoundCloud</a></li>
-        <li> <a href="https://twitter.com/daZinci"><i class="fab fa-twitter"></i>&nbsp;Twitter</a></li>
-        <li> <a href="https://www.instagram.com/erskine.davinci/"><i class="fab fa-instagram"></i>&nbsp;Instagram</a></li>
+    <!-- Sidebar Navigation Details-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home </a>
+        <a href="#">Bio</a>
+        <a href="#">Contact</a>
+        <a href="#">Upcoming</a>
+    </div>
 
-        <!-- Navigation Bar Branding -->
 
-        <li style="float: right"> <a href="home.html" class="active">Erskine</a> </li>
-    </ul>
 
 
     <div id="body">
-        <div id="mainInfo">
-            <h2>Erskine</h3>
-        </div>
 
-        <div class="container-fluid">
-
-            <div id="center">
-                <div class="h5text">
-                    <h5 class="text-center" id="tours-sounds">Tour & Music</h5>
-                </div>
-            </div>
-            <div class="iframe_box">
-                <object data="http://www.web-source.net">
-                    <embed src="https://www.web-source.net"> </embed>
-                    Error: Embedded data could not be displayed.
-                </object>
-            </div>
-            <hr />
-
-            <div id="center">
-                <div class="h5text">
-                    <h5 class="text-center" id="social">Social</h5>
-                </div>
-            </div>
-            <hr />
+        <div class="contain">
 
             <div class="blur">
-                <div class="carousel" id="slidefade" data-flickity='{ "resize": false }' data-flickity='{"prevNextButtons": false}'>
+                <div class="carousel" id="slidefade" data-flickity='{ "resize": false }' data-flickity='{"prevNextButtons": false}' autofocus='true'>
                     <div class="carousel-cell">
                         <a data-flickity- class="twitter-timeline" data-width="100%" data-height="350" data-theme="dark"
                             data-link-color="#FAB81E" href="https://twitter.com/daZinci?ref_src=twsrc%5Etfw">Tweets by
@@ -84,17 +75,16 @@
                 </div>
             </div>
         </div>
+    </div>
 
 
 
-
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 <div class="footer">
