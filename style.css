@@ -1,20 +1,18 @@
 /* Home and Body CSS throughout Website */
 
-html {
-    background: url(erskinegrowth.png) no-repeat;
+body {
+    color: gray;
+    background: url(erskinegrowth.png) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-body {
-    color: gray;
-    background: transparent;
     font-family: '';
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
+
+/* Background Color of the Side Navigation Bar */
 
 .sidenav {
     height: 100%;
@@ -23,11 +21,16 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #DDECEB;
+    background-color: #362F1C;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
+
+/*-------------------------------------------*/
+
+/* Controls Information Concerning Text, and the Various Characteristics within the information inside of
+the sidenav */
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -35,12 +38,18 @@ body {
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: 2.5s;
 }
 
+/*-------------------------------------------*/
+
+/* Font Color of the 'sidebar a' text on hover */
+
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: gold;
 }
+
+/*--------------------------------------------- */
 
 .sidenav .closebtn {
     position: absolute;
@@ -50,12 +59,22 @@ body {
     margin-left: 50px;
 }
 
+/* Section CSS throughout Website (ScrollSpy Enabled) */
+
+#section-upcoming, #section-biography, #section-contactme{
+    width: 100%;
+    height: 100vh;
+}
+
+#section-upcoming{
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0.2;
+}
 
 #body {
     height: 100%;
     width: 100%;
 }
-
 
 #center {
     margin-top: 20px;
@@ -92,14 +111,13 @@ body {
 }
 
 .blur {
-    width: 820px;
+    width: 805px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px 10px #716752;
     border-radius: 5px;
-    
 }
 
 navbar, .footer {
@@ -108,7 +126,7 @@ navbar, .footer {
 
 .carousel {
     background: transparent;
-    width: 820px;
+    width: 805px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;

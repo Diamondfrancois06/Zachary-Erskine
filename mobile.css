@@ -1,6 +1,11 @@
-body{
-    height: 100%;
+body {
+    background: url(erskinegrowth.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: 100%;
+    min-height: 100vh;
 }
 
 #body {
@@ -45,7 +50,13 @@ body{
     border-radius: 5px;
 }
 
-body > .footer{
+#socialmedia {
+    margin-bottom: 75px;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+body>.footer {
     margin-bottom: 0;
     position: absolute;
 }
@@ -53,26 +64,18 @@ body > .footer{
 /* CSS for Navbar on Mobile Devices */
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  
-
-/* CSS for Background on Mobile Devices */
-
-@media screen and (max-width: 900px) and (max-width: 900px) and (orientation: portrait){
-    html {
-        background: url(erskinegrowth.png) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
     }
 }
 
+/* CSS for Background on Mobile Devices */
 
-@media only screen and (max-width: 750px) and (orientation: landscape) {
-    body {
+@media only screen and (max-width: 900px) and (orientation: landscape) {
+    #body, .footer, #socialmedia {
         display: none;
     }
 }

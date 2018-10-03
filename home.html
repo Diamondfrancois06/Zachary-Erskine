@@ -17,6 +17,27 @@
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
+
+        /* Enable smooth scrolling on all links with anchors */
+        $('#mySidenav.smoothscroll ul li a[href^="#"]').on('click', function (e) {
+
+            // prevent default anchor click behavior
+            e.preventDefault();
+
+            // store hash
+            var hash = this.hash;
+
+            // animate
+            $('html, body').animate({
+                scrollTop: $('a[name="' + this.hash.replace('#', '') + '"]').offset().top
+            }, 300, function () {
+
+                // when done, add hash to url
+                // (default click behaviour)
+                window.location.hash = hash;
+
+            });
+        });
     </script>
 
     <meta charset="utf-8">
@@ -33,17 +54,18 @@
 
 </head>
 
-<body>
-    <!-- Button for Sidebar Navigation-->
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<body id="section-bodyHome" data-spy="scroll" data-target="#mySidenav" data-offset="50">
 
-    <!-- Sidebar Navigation Details-->
+    <!-- Button for Sidebar Navigation-->
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+    <!-- Sidebar Navigation Details  ***Created a scrollspy for the webpage***-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Home </a>
-        <a href="#">Bio</a>
-        <a href="#">Contact</a>
-        <a href="#">Upcoming</a>
+        <a href="#section-bodyHome">Home </a>
+        <a href="#section-upcoming">Upcoming</a>
+        <a href="#section-biography">Bio</a>
+        <a href="#section-contactme">Contact</a>
     </div>
 
 
@@ -54,7 +76,7 @@
         <div class="contain">
 
             <div class="blur">
-                <div class="carousel" id="slidefade" data-flickity='{ "resize": false }' data-flickity='{"prevNextButtons": false}' autofocus='true'>
+                <div class="carousel" id="slidefade" data-flickity='{ "resize": false }' data-flickity='{"prevNextButtons": false}'>
                     <div class="carousel-cell">
                         <a data-flickity- class="twitter-timeline" data-width="100%" data-height="350" data-theme="dark"
                             data-link-color="#FAB81E" href="https://twitter.com/daZinci?ref_src=twsrc%5Etfw">Tweets by
@@ -77,6 +99,33 @@
         </div>
     </div>
 
+    <!-- Section about Upcoming Events and Shows for Erskine -->
+    <section id="section-upcoming">
+
+    </section>
+    <!--------------------------------------------------------->
+
+    <!-- Section about Biography -->
+    <section id="section-biography">
+
+    </section>
+    <!----------------------------->
+
+    <!-- Section Regarding Contacting Erskine-->
+    <section id="section-contactme">
+
+    </section>
+    <!----------------------------------------->
+
+
+
+    <!-- Social Media Links and References -->
+    <div class="text-center" id="socialmedia">
+        <i class="fab fa-instagram fa-5x" style="color: #3F729B"></i>&nbsp;
+        <i class="fab fa-soundcloud fa-5x" style="color: #ff7700"></i>&nbsp;
+        <i class="fab fa-twitter fa-5x" style="color: #00aced"></i>&nbsp;
+    </div>
+    <!--------------------------------------->
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -85,7 +134,15 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var scroll= new SmoothScroll('a[href *= "#section-"]');
+        });
+
+    </script>
 </body>
+
 
 <div class="footer">
     <p id="trademark">2018 Zachary Erskine Music&trade;</p>
