@@ -7,39 +7,6 @@
             background-color: #716752;
         }
     </style>
-
-    <!-- JavaScript for Sidebar Navigation-->
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "200px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-
-        /* Enable smooth scrolling on all links with anchors */
-        $('#mySidenav.smoothscroll ul li a[href^="#"]').on('click', function (e) {
-
-            // prevent default anchor click behavior
-            e.preventDefault();
-
-            // store hash
-            var hash = this.hash;
-
-            // animate
-            $('html, body').animate({
-                scrollTop: $('a[name="' + this.hash.replace('#', '') + '"]').offset().top
-            }, 300, function () {
-
-                // when done, add hash to url
-                // (default click behaviour)
-                window.location.hash = hash;
-
-            });
-        });
-    </script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -57,7 +24,12 @@
 <body id="section-bodyHome" data-spy="scroll" data-target="#mySidenav" data-offset="50">
 
     <!-- Button for Sidebar Navigation-->
-    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+    <a class="hamburger icon">
+        <div class="hamburger_top"></div>
+        <div class="hamburger_middle"></div>
+        <span style="position:sticky;font-size:30px;cursor:pointer;color: gray;" onclick="openNav()">&#9776;</span>
+    </a>
+
 
     <!-- Sidebar Navigation Details  ***Created a scrollspy for the webpage***-->
     <div id="mySidenav" class="sidenav">
@@ -99,21 +71,70 @@
         </div>
     </div>
 
-    <!-- Section about Upcoming Events and Shows for Erskine -->
+    <!-- Section about Upcoming Events and Shows for Erskine --
     <section id="section-upcoming">
 
     </section>
-    <!--------------------------------------------------------->
+    --------------------------------------------------------->
 
     <!-- Section about Biography -->
     <section id="section-biography">
+        <!-- Section will have a Gradient Split Background of Tokyo and Venice-->
+        <!-- Tokyo Div -->
+        <div id="tokyo"></div>
+        <!-- Venice Div -->
+        <div id="venice"></div>
+        <div id="biography-content">
+            <h2 class="content-subtitle">Biografia</h2>
+            <div id="paragraph-message">
+                <p> erskine. '95 nomad. creator. artist. miyazaki papi. visionary.
 
+                    born in misawa, japan raised inbetween italy and the south. residing in seattle.
+                    come as you are..
+
+                    &
+
+                    simplicitas est ultimum ruditatis
+                </p>
+            </div>
+        </div>
     </section>
     <!----------------------------->
 
     <!-- Section Regarding Contacting Erskine-->
     <section id="section-contactme">
-
+        <div id="contact-content">
+            <h2 class="contact-subtitle">Contact Me</h2>
+            <form id="contact-me-form">
+                <div class="form-row">
+                    <div class="form-group col-md">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
     <!----------------------------------------->
 
@@ -137,10 +158,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.js"></script>
     <script type="text/javascript">
         $(function () {
-            var scroll= new SmoothScroll('a[href *= "#section-"]');
+            var scroll = new SmoothScroll('a[href *= "#section-"]');
+        });
+    </script>
+
+    <!-- JavaScript for Sidebar Navigation-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Enable smooth scrolling on all links with anchors */
+        $('#mySidenav.smoothscroll ul li a[href^="#"]').on('click', function (e) {
+
+            // prevent default anchor click behavior
+            e.preventDefault();
+
+            // store hash
+            var hash = this.hash;
+
+            // animate
+            $('html, body').animate({
+                scrollTop: $('a[name="' + this.hash.replace('#', '') + '"]').offset().top
+            }, 300, function () {
+
+                // when done, add hash to url
+                // (default click behaviour)
+                window.location.hash = hash;
+
+            });
         });
 
+        // Adding Sticky Functionality to Hamburger Icon
+
+
     </script>
+
 </body>
 
 

@@ -61,6 +61,16 @@ body>.footer {
     position: absolute;
 }
 
+/* CSS for Divs and other Elements within Sections of Website */
+
+#biography-content {
+    float: right;
+    position: relative;
+    height: auto;
+    width: 75%;
+    margin-top: 50%;
+}
+
 /* CSS for Navbar on Mobile Devices */
 
 @media screen and (max-height: 450px) {
