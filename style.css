@@ -51,46 +51,8 @@ body {
     display: none;
 }
 
-.blur {
-    width: 805px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px 10px #716752;
-    border-radius: 5px;
-}
-
 navbar, .footer {
     width: 100%;
-}
-
-.carousel {
-    background: transparent;
-    width: 805px;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50%;
-    border: 2px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0;
-}
-
-.carousel-cell {
-    width: 800px;
-    height: 400px;
-    border: 2px solid gold;
-    border-radius: 5px;
-    margin-right: 5px;
-    background-color: transparent;
-}
-
-#swipe {
-    margin-bottom: 100%;
-    text-align: center;
-    color: #fafafa;
-    background-color: #BD7F00;
-    height: 46px;
 }
 
 /* Background Color of the Side Navigation Bar */
@@ -142,16 +104,215 @@ the sidenav */
 
 /* Section CSS throughout Website (ScrollSpy Enabled) */
 
-#section-upcoming, #section-biography, #section-contactme {
+#section-home, #section-upcoming, #section-contactme {
     width: 100%;
     height: 100%;
     position: relative;
+    border: 2px solid black;
 }
 
-#section-upcoming {
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0.2;
+#section-biography {
+    width: 100%;
+    height: 60%;
+    border: 2px solid black;
 }
+
+/* Section Home Information */
+
+.blur {
+    width: 400px;
+    height: 400px;
+    margin-right: 10px;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 10px #716752;
+    border-radius: 5px;
+    float: right;
+}
+
+.carousel {
+    background: transparent;
+    width: 400px;
+    height: 400px;
+    border: 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+}
+
+.carousel-cell {
+    width: 400px;
+    height: 400px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+#swipe {
+    margin-bottom: 100%;
+    text-align: center;
+    color: #fafafa;
+    background-color: #BD7F00;
+    height: 46px;
+}
+
+#discography {
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.blur, #discography {
+    display: inline-block;
+}
+
+#check {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background: #BD7F00;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+.dots-wrapper {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+    bottom: 20px;
+    text-align: center;
+    li {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 0 4px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        &.active, &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden;
+    .slider-inner {
+        position: absolute;
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .slide {
+            float: left;
+            box-sizing: border-box;
+            background-size: 100% auto;
+            background-attachment: fixed;
+            background-position: center center;
+            &.slide1 {
+                background-image: url('http://blogs-images.forbes.com/rosatrieu/files/2014/08/Valencia_market_-_lemons-1940x1454.jpg');
+            }
+            &.slide2 {
+                background-image: url('http://i.huffpost.com/gen/2930708/images/o-GMO-ORANGES-facebook.jpg');
+            }
+            &.slide3 {
+                background-image: url('http://blogs.kcrw.com/goodfood/wp-content/uploads/2013/05/watermelon.jpeg');
+            }
+            &.slide4 {
+                background-image: url('http://lghttp.32478.nexcesscdn.net/80E972/organiclifestylemagazine/wp-content/uploads/2013/09/Blueberries-.jpg');
+            }
+            &.slide5 {
+                background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Limes.jpg/1200px-Limes.jpg');
+            }
+            img {
+                display: block;
+            }
+            span {
+                cursor: default;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                display: block;
+                width: 100vw;
+                height: 100vh;
+                top: 12vw;
+                font-size: 10vw;
+                line-height: 100vh;
+                letter-spacing: 1vw;
+                font-family: Impact, Charcoal, sans-serif;
+                text-shadow: 5px 5px 0px #ffffff;
+            }
+        }
+    }
+}
+
+a[class|="arrow"] {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+}
+
+.arrow-left {
+    left: 20px;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid #ffffff;
+    transform: rotate(45deg);
+    transition: left 0.5s;
+    &:hover {
+        left: 15px;
+    }
+}
+
+.arrow-right {
+    right: 20px;
+    border-bottom: 6px solid #ffffff;
+    border-right: 6px solid #ffffff;
+    transform: rotate(-45deg);
+    transition: right 0.5s;
+    &:hover {
+        right: 15px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+/* Section Upcoming Information */
+
+#upcoming-info {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin-top: 200px;
+}
+
+/*-------------------------------*/
 
 /* Section Biography Containing Information */
 
@@ -191,7 +352,7 @@ screen and have gradient toward the middle of the screen.
     position: relative;
     height: auto;
     width: 75%;
-    margin-top: 15%;
+    margin-top: 100px;
     background: url(erskinebio.jpg) no-repeat center fixed;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;

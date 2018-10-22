@@ -68,7 +68,19 @@ body>.footer {
     position: relative;
     height: auto;
     width: 75%;
-    margin-top: 50%;
+    margin-top: 60px;
+    background: url(erskinebio.jpg) no-repeat center fixed;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#biography-content>#paragraph-message {
+    width: 50%;
+    float: right;
 }
 
 /* CSS for Navbar on Mobile Devices */
